@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTPS - Learn SW OffLine</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <p>
+      图片1：<img
+        src="./assets/images/background1.jpg"
+        alt="image1"
+        width="512"
+        height="256"
+      />
+    </p>
+    <p>
+      图片2：<img
+        src="./assets/images/background2.jpg"
+        alt="image2"
+        width="512"
+        height="256"
+      />
+    </p>
+    <p>Service Worker注册：<span class="text" id="register"></span></p>
+    <!-- <p>我更新啦！</p> -->
+    <dialog class="dialog" id="myDialog">
+      <div class="dialogContent">
+        <p>检查到网页存在更新，请立即刷新</p>
+        <button type="submit" onclick="location.reload()">确定</button>
+      </div>
+    </dialog>
+
+    <script src="./src/index.js" type="text/javascript" />
+  </body>
+</html>

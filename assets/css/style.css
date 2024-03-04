@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+.text{
+    color: red;
+}
+
+
+.dialog{
+    background: #fff;
+    padding: 15px;
+    position: fixed;
+    z-index: 10000;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    border-radius:15px;
+}
+
+.dialogContent{
+    min-width: 300px;
+    min-height:80px;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dialogBtn{
+    text-align: center;
+    padding-top: 15px;
+}
+.dialog button{
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    background: #3f74e3;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px -1px 0 rgba(0,0,0,0.5);
+    border:none;
+    border-radius: 5px;
+}
+
