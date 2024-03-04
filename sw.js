@@ -68,7 +68,14 @@ self.addEventListener("fetch", (e) => {
       .then(function (response) {
         if (response) {
           console.log("缓存匹配到res:", response.url);
-          return response;
+          const newRes = response.clone(); //因为response是一个流，只能用一次，所以这里要 clone 一下。
+          return new Response(response.body, {
+            ...newRes,
+            //改写资源响应头，因为Chrome中memoryCache优先于ServiceWorkerCache，为了在demo里展示出来
+            headers: {
+              "cache-control": "max-age=0",
+            },
+          });
         }
         console.log("缓存未匹配对应request,准备从network获取", caches);
         return fetch(e.request);
