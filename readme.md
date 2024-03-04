@@ -1,7 +1,8 @@
 本项目来自本人博客：[【实战】ServiceWorker实现离线缓存](http://120.25.166.245/index.php/archives/15/)
 
-## 摘要：
+你可在此体验[Demo](https://232295311.github.io/learn-sw/app.html)（记得打开Chrome开发者工具）
 
+## 摘要：
 
 ### 什么是Service Worker?
 
